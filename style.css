@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color scheme */
+:root {
+    --main-color: #f5fff5;
+    --secondary-color: #021713;
+    --accent-color: #002e12;
+    --highlight-color: #112c02;
+    --dark-color: #6FD8DE;
+    --light-color: #10ea67;
+    --text-color: #000; 
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color); 
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Link styles */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section styles with borders */
+section {
+    border: 2px solid #112c02; /* Example border style */
+    padding: 20px; /* Add padding to give some space inside the border */
+    margin-bottom: 20px; /* Create space between sections */
+}
+footer {
+    text-align: right;
+}
