@@ -4,15 +4,24 @@
     box-sizing: border-box;
 }
 
+html, body {
+    min-height: 100vh;
+}
+
 /* Color scheme */
 :root {
-    --main-color: #f5fff5;
-    --secondary-color: #021713;
-    --accent-color: #002e12;
-    --highlight-color: #112c02;
-    --dark-color: #6FD8DE;
-    --light-color: #10ea67;
-    --text-color: #000; 
+    --main-color: #38016f; 
+    --secondary-color: #4a3163; 
+    --accent-color: #fff; 
+    --highlight-color: #f5f5f5; 
+    --dark-color: #222; 
+    --light-color: #f2f5f0;
+    --text-color: #120118; 
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    color: var(--main-color);
 }
 
 /* Body styles */
@@ -23,19 +32,34 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
-    color: var(--main-color);
-    margin-bottom: 20px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
 /* Link styles */
+nav {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+nav ul {
+    display: flex;
+    flex-direction: row; /* This makes the list items align horizontally */
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+nav ul li {
+    margin-right: 20px; /* Adds some space between the list items */
+}
+
 a {
-    color: var(--accent-color);
+    color: var(--secondary-color); 
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    transform: scale(0.98);
+    background-color: #051c8f;
 }
 
 /* Container styles */
@@ -45,18 +69,78 @@ a {
     padding: 0 15px;
 }
 
-/* Image styles */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Section styles with borders */
 section {
-    border: 2px solid #112c02; /* Example border style */
-    padding: 20px; /* Add padding to give some space inside the border */
-    margin-bottom: 20px; /* Create space between sections */
+    border: 2px solid var(--dark-color);
+    padding: 20px; 
+    margin-bottom: 20px; 
 }
-footer {
+
+/* Image styles */
+img {
+    width: 700px; /* Set a specific width for the images */
+    height: 800px; /* Set a specific height for the images */
+    border: 2px solid #22bfa2; /* Add a solid border around the image */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    display: inline-block; /* Make the image a block element for better alignment */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+figure {
+    text-align: center; /* Center the content within the figure element */
+}
+
+figcaption {
+    font-style: italic; /* Style the caption with italic font */
+}
+
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px; /* Adjust the margin as needed */
+}
+
+.footer-link {
     text-align: right;
+    text-decoration: none;
+    color: #38016f;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #78bfb2;
+    padding: 10px 18px 6px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-flex; /* Use flexbox for alignment */
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    height: 30px; /* Set a fixed height to ensure consistent padding */
+    line-height: normal; /* Ensure line-height does not affect alignment */
+}
+
+.footer-link:hover {
+    background-color: #01c19e; /* Change background color on hover */
+}
+body {
+    background-image: url('images/cool-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section {
+    overflow: hidden;
+}
+
+figure {
+    float: left;
+    margin-right: 20px;
+}
+
+p {
+    clear: both;
+}
+
+p {
+    text-align: center;
 }
