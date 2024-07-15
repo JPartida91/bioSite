@@ -78,8 +78,8 @@ section {
 
 /* Image styles */
 img {
-    width: 700px; /* Set a specific width for the images */
-    height: 800px; /* Set a specific height for the images */
+    width: 500px; /* Set a specific width for the images */
+    height: 400px; /* Set a specific height for the images */
     border: 2px solid #22bfa2; /* Add a solid border around the image */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
     max-width: 100%; /* Ensure the image doesn't exceed its container width */
@@ -144,4 +144,15 @@ p {
     text-align: left;
     text-indent: 20px;
     margin-bottom: 20px;
+}
+.enlarged {
+    width: 900px; /* image enlargement */
+    height: auto;
+}
+.click-hint {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
 }

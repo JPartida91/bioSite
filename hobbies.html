@@ -24,19 +24,24 @@
     </nav>
     <main>
         <section>
-            <h2>My Hobbies</h2>
+            <h2>Josie's Hobbies</h2>
             <p>Exploring the world of anime, capturing moments through photography, and diving into the art of video editing are some of my favorite pastimes. Each hobby allows me to express my creativity and passion in unique ways.</p>
             <figure>
-                <img src="images/Animes.png" alt="Anime Image">
+                <img src="images/Animes.png" class="clickable-image" alt="Anime Image">
+                <span class="click-hint">Click to Enlarge</span>
                 <figcaption>Anime</figcaption>
+                
             </figure>
             <figure>
-                <img src="images/Photography.jpg" alt="Photography Image">
+                <img src="images/Photography.jpg" class="clickable-image" alt="Photography Image">
+                 <span class="click-hint">Click to Enlarge</span>
                 <figcaption>Photography</figcaption>
             </figure>
             <figure>
-                <img src="images/Video_Editing_2.jpg" alt="Video Editing Image">
+                <img src="images/Video_Editing_2.jpg" class="clickable-image" alt="Video Editing Image">
+                <span class="click-hint">Click to Enlarge</span>
                 <figcaption>Video Editing</figcaption>
+                
             </figure>
         </section>
     </main>
@@ -47,6 +52,16 @@
             </a>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".clickable-image");
+            images.forEach(image => {
+                image.addEventListener("click", function() {
+                    this.classList.toggle("enlarged");
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

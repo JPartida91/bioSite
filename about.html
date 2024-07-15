@@ -24,10 +24,12 @@
     </nav>
     <main>
         <section>
-            <h2>Josie Partida</h2>
+            <h2> About Josie Partida</h2>
             <figure>
-                <img src="images/Josie.jpg" alt="Josie Partida" width="300">
+                <img src="images/Josie.jpg" class="clickable-image" alt="Josie Partida" width="300">
+                <span class="click-hint">Click to Enlarge</span>
                 <figcaption>This is Josie Partida</figcaption>
+                
             </figure>
             
             <p>Josie Partida is one of the most creative people I know. He's into making YouTube videos, watching anime, photography, and editing. He has a real passion for it and is good at it, too. He loves expressing himself through these things, inspiring everyone around him. He's constantly learning and getting better and always coming up with new ideas. He's dedicated to his craft, and it shows.</p>
@@ -49,6 +51,16 @@
             </a>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".clickable-image");
+            images.forEach(image => {
+                image.addEventListener("click", function() {
+                    this.classList.toggle("enlarged");
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

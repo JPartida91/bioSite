@@ -22,19 +22,25 @@
     </nav>
     <main>
         <section>
-            <h2>About Me</h2>
+            <h2>Josie Partida</h2>
             <p>My interest in making YouTube videos, anime, photography and video editing was sparked by a combination of my love for storytelling, creativity, and visual arts. .</p>
             <figure>
-                <img src="images/YouTube_Channel.png" alt="Description of the image">
+                <img src="images/YouTube_Channel.png" class="clickable-image" alt="Description of the image">
+                <span class="click-hint">Click to Enlarge</span>
                 <figcaption>Josie's YouTube Channel</figcaption>
+                
             </figure>
             <figure>
-                <img src="images/Video_Editing.jpg" alt="Description of image 2">
+                <img src="images/Video_Editing.jpg" class="clickable-image" alt="Description of image 2">
+                <span class="click-hint">Click to Enlarge</span>
                 <figcaption>Video Edit Software</figcaption>
+                
             </figure>
             <figure>
-                <img src="images/Video_Making.jpg" alt="Description of image 3">
+                <img src="images/Video_Making.jpg" class="clickable-image" alt="Description of image 3">
+                <span class="click-hint">Click to Enlarge</span>
                 <figcaption>Camera</figcaption>
+                
             </figure>
         </section>
     </main>
@@ -45,5 +51,15 @@
             </a>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".clickable-image");
+            images.forEach(image => {
+                image.addEventListener("click", function() {
+                    this.classList.toggle("enlarged");
+                });
+            });
+        });
+    </script>
 </body>
 </html>
